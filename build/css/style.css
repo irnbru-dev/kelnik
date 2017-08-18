@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'PrototypsterMedium';
+  src: url('../fonts/PrototypsterMedium.ttf') format('truetype'), url('../fonts/Prototypster-Medium.otf') format('otf'), url('../fonts/PrototypsterMedium.svg') format('svg'), url('../fonts/PrototypsterMedium.eot') format('eot'), url('../fonts/prototypster-medium-webfont.eot') format('eot'), url('../fonts/prototypster-medium-webfont.ttf') format('truetype'), url('../fonts/prototypster-medium-webfont.woff') format('woff'), url('../fonts/prototypster-medium-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PrototypsterMedium';
+  src: url('../fonts/PrototypsterMedium.ttf') format('truetype'), url('../fonts/Prototypster-Medium.otf') format('otf'), url('../fonts/PrototypsterMedium.svg') format('svg'), url('../fonts/PrototypsterMedium.eot') format('eot'), url('../fonts/prototypster-medium-webfont.eot') format('eot'), url('../fonts/prototypster-medium-webfont.ttf') format('truetype'), url('../fonts/prototypster-medium-webfont.woff') format('woff'), url('../fonts/prototypster-medium-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+.header {
+  text-align: center;
+}
+.header a {
+  color: #ff5e42;
+}
+body {
+  font-family: 'Tahoma', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #2a2a2a;
+}
+.container {
+  width: 1024px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid transparent;
+}
+.header a {
+  color: #ff5e42;
+  text-decoration: none;
+  border-bottom: 1px dashed #ff5e42;
+}
+.header a:hover {
+  border-bottom: 1px solid #ff5e42;
+}
+.header a:after {
+  position: relative;
+  content: '|';
+  color: black;
+  left: 3px;
+}
+.header a:last-child:after {
+  display: none;
+}
+h1 {
+  font-family: 'PrototypsterMedium', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.content {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.card {
+  position: relative;
+  display: inline-block;
+  height: 430px;
+  max-width: 220px;
+  margin-right: 2%;
+  border: 4px solid transparent;
+  box-shadow: 0px -3px 2px -3px rgba(50, 50, 50, 0.75);
+  border-radius: 6px;
+  padding: 7px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+.card:hover {
+  border: 4px solid #ff5e42;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card:last-child {
+  margin-right: 0;
+}
+.card.label:after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 55px;
+  top: -4px;
+  right: 13px;
+  background-image: url(../img/label.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.card .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: 180px;
+}
+.card .img-box img {
+  width: 100%;
+}
+.card h2 {
+  font-family: 'PrototypsterMedium', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.card .status {
+  margin-bottom: 25px;
+}
+.card .occupancy {
+  position: absolute;
+  bottom: 20px;
+  font-family: 'PrototypsterMedium', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #b8b8b8;
+}
+.card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.footer {
+  background-image: url(../img/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'PrototypsterMedium', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

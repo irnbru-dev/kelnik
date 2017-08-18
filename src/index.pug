@@ -1,1 +1,75 @@
-p.HELLO WORLD!
+doctype
+html(lang='ru')
+
+  head
+    link(rel='stylesheet', href='css/style.css')
+  
+  body
+    main
+      header.header
+        div.container
+          h1 Мои заказы
+          p Сортировать:
+            a(href="#") по дате
+            a(href="#") по готовности
+
+      section.content
+        div.container
+
+          div.card
+            div.img-box
+              img(src="./img/card-img.jpg", alt="Fotopolymer")
+            h2.name Название заказа
+            p.status Статус: 
+            p.date Загружен: 
+            p.description Фотополимер покрашенный
+            p.number Количество экземпляров: 
+
+            p.occupancy Выполнен на 60%
+
+          div.card
+            div.img-box
+              img(src="./img/card-img.jpg", alt="Fotopolymer")
+            h2.name Название заказа
+            p.status Статус: 
+            p.date Загружен: 
+            p.description Фотополимер покрашенный
+            p.number Количество экземпляров: 
+
+            p.occupancy Выполнен на 60%
+
+          div.card.label
+            div.img-box
+              img(src="./img/card-img.jpg", alt="Fotopolymer")
+            h2.name Название заказа
+            p.status Статус: 
+            p.date Загружен: 
+            p.description Фотополимер покрашенный
+            p.number Количество экземпляров: 
+
+            p.occupancy Выполнен на 60%
+
+          div.card
+            div.img-box
+              img(src="./img/card-img.jpg", alt="Fotopolymer")
+            h2.name Название заказа
+            p.status Статус: 
+            p.date Загружен: 
+            p.description Фотополимер покрашенный
+            p.number Количество экземпляров: 
+
+            p.occupancy Выполнен на 60%
+
+      footer.footer
+        div.container
+
+          form
+            label Ваш email:
+              input(type='email',placeholder='dedal79gmail.com')
+            label
+              input(type='checkbox') 
+              span Подписаться на новости
+            label
+              input(type='submit',value='Зарегистрироваться')
+              span Зарегистрироваться
+

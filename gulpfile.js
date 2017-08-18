@@ -18,19 +18,22 @@ var path = {
         js:         'build/js/',
         css:        'build/css/',
         html:       'build/',
-        img:        'build/img/'
+        img:        'build/img/',
+        fonts:      'build/fonts/'
     },
     src: {
         js:         'src/js/**/*.js',
-        less:       'src/less/*.less',
+        less:       'src/less/**/*.less',
         html:       'src/**/*.pug',
-        img:        'src/img/**/*.*'
+        img:        'src/img/**/*.*',
+        fonts:      'src/fonts/**/*.*'
     },
     watch: {
         js:         'src/js/**/*.js',
         less:       ['src/less/**/*.less'],
         pug:        ['src/pug/**/*.pug'],
-        img:        'src/img/*.*'
+        img:        'src/img/*.*',
+        fonts:      'src/fonts/**/*.*'
     }
 };
 
@@ -67,13 +70,19 @@ gulp.task('img', function () {
     // .pipe(reload({stream: true}));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src(path.src.fonts)
+    // .pipe(newer(path.build.fonts))
+    .pipe(gulp.dest(path.build.fonts))
+});
+
 // Clean
 gulp.task('clean', function () {
     return del(path.clean);
 });
 
 // Overall build
-gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'js' , 'less', 'img')));
+gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'js' , 'less', 'img', 'fonts')));
 
 
 // Server config
@@ -99,10 +108,11 @@ gulp.task('watch', function() {
     gulp.watch(path.watch.js, gulp.series('js'));
     gulp.watch(path.watch.pug, gulp.series('pug'));
     gulp.watch(path.watch.img, gulp.series('img'));
+    gulp.watch(path.watch.fonts, gulp.series('fonts'));
 });
 
 // Default task
 gulp.task('default',
-    
+
     gulp.series('build', gulp.parallel('watch', 'serve'))
 );
