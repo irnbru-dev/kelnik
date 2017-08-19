@@ -8,7 +8,8 @@ html(lang='ru')
     main
       header.header
         div.container
-          h1 Мои заказы
+          div.logo
+            h1 Мои заказы
           p Сортировать:
             a(href="#") по дате
             a(href="#") по готовности
@@ -64,12 +65,12 @@ html(lang='ru')
         div.container
 
           form
-            label Ваш email:
-              input(type='email',placeholder='dedal79gmail.com')
-            label
-              input(type='checkbox') 
-              span Подписаться на новости
-            label
-              input(type='submit',value='Зарегистрироваться')
-              span Зарегистрироваться
+            label Ваш email :
+              input(type='email',placeholder='dedal79@gmail.com')
+            div
+              input(type='checkbox',id="check",name="check")
+              label(for="check") Подписаться на новости
+            div.submit
+              label
+                input(type='submit',value='Зарегистрироваться')
 

@@ -7,7 +7,9 @@
     <main>
       <header class="header">
         <div class="container">
-          <h1>Мои заказы</h1>
+          <div class="logo">
+            <h1>Мои заказы</h1>
+          </div>
           <p>Сортировать:
             <a href="#">по дате</a>
             <a href="#">по готовности</a>
@@ -65,17 +67,18 @@
       <footer class="footer">
         <div class="container">
           <form>
-            <label>Ваш email:
+            <label>Ваш email :
               <input type="email" placeholder="dedal79gmail.com">
             </label>
-            <label>
-              <input type="checkbox">
-              <span>Подписаться на новости</span>
-            </label>
-            <label>
-              <input type="submit" value="Зарегистрироваться">
-              <span>Зарегистрироваться</span>
-            </label>
+            <div>
+              <input type="checkbox" id="check" name="check">
+              <label for="check">Подписаться на новости</label>
+            </div>
+            <div class="submit">
+              <label>
+                <input type="submit" value="Зарегистрироваться">
+              </label>
+            </div>
           </form>
         </div>
       </footer>
