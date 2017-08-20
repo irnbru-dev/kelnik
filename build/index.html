@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <title>Kelnik</title>
   </head>
   <body>
-    <main>
-      <header class="header">
-        <div class="container">
-          <div class="logo">
-            <h1>Мои заказы</h1>
-          </div>
-          <p>Сортировать:
-            <a href="#">по дате</a>
-            <a href="#">по готовности</a>
-          </p>
-        </div>
-      </header>
-      <section class="content">
-        <div class="container">
-          <div class="card">
-            <div class="img-box">
-              <img src="./img/card-img.jpg" alt="Fotopolymer">
+    <div class="wrapper">
+      <div class="inner">
+        <header class="header">
+          <div class="container">
+            <div class="logo">
+              <h1>Мои заказы</h1>
             </div>
-            <h2 class="name">Название заказа</h2>
-            <p class="status">Статус: </p>
-            <p class="date">Загружен: </p>
-            <p class="description">Фотополимер покрашенный</p>
-            <p class="number">Количество экземпляров: </p>
-            <p class="occupancy">Выполнен на 60%</p>
+            <p>Сортировать:
+              <a href="#">по дате</a>
+              <a href="#">по готовности</a>
+            </p>
           </div>
-          <div class="card">
-            <div class="img-box">
-              <img src="./img/card-img.jpg" alt="Fotopolymer">
+        </header>
+        <main>
+          <section class="content">
+            <div class="container">
+              <div class="card">
+                <div class="img-box">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <h2 class="name">Название заказа</h2>
+                <p class="status">Статус: </p>
+                <p class="date">Загружен: </p>
+                <p class="description">Фотополимер покрашенный</p>
+                <p class="number">Количество экземпляров: </p>
+                <p class="occupancy">Выполнен на 60%</p>
+              </div>
+              <div class="card">
+                <div class="img-box">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <h2 class="name">Название заказа</h2>
+                <p class="status">Статус: </p>
+                <p class="date">Загружен: </p>
+                <p class="description">Фотополимер покрашенный</p>
+                <p class="number">Количество экземпляров: </p>
+                <p class="occupancy">Выполнен на 60%</p>
+              </div>
+              <div class="card label">
+                <div class="img-box">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <h2 class="name">Название заказа</h2>
+                <p class="status">Статус: </p>
+                <p class="date">Загружен: </p>
+                <p class="description">Фотополимер покрашенный</p>
+                <p class="number">Количество экземпляров: </p>
+                <p class="occupancy">Выполнен на 60%</p>
+              </div>
+              <div class="card">
+                <div class="img-box">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <h2 class="name">Название заказа</h2>
+                <p class="status">Статус: </p>
+                <p class="date">Загружен: </p>
+                <p class="description">Фотополимер покрашенный</p>
+                <p class="number">Количество экземпляров: </p>
+                <p class="occupancy">Выполнен на 60%</p>
+              </div>
             </div>
-            <h2 class="name">Название заказа</h2>
-            <p class="status">Статус: </p>
-            <p class="date">Загружен: </p>
-            <p class="description">Фотополимер покрашенный</p>
-            <p class="number">Количество экземпляров: </p>
-            <p class="occupancy">Выполнен на 60%</p>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <form id="registration">
+          <label class="email">Ваш email :
+            <input type="text" placeholder="dedal79@gmail.com" id="f_mail">
+          </label>
+          <span id="message">прпрпр</span>
+          <div>
+            <input type="checkbox" id="check" name="check">
+            <label for="check">Подписаться на новости</label>
           </div>
-          <div class="card label">
-            <div class="img-box">
-              <img src="./img/card-img.jpg" alt="Fotopolymer">
-            </div>
-            <h2 class="name">Название заказа</h2>
-            <p class="status">Статус: </p>
-            <p class="date">Загружен: </p>
-            <p class="description">Фотополимер покрашенный</p>
-            <p class="number">Количество экземпляров: </p>
-            <p class="occupancy">Выполнен на 60%</p>
-          </div>
-          <div class="card">
-            <div class="img-box">
-              <img src="./img/card-img.jpg" alt="Fotopolymer">
-            </div>
-            <h2 class="name">Название заказа</h2>
-            <p class="status">Статус: </p>
-            <p class="date">Загружен: </p>
-            <p class="description">Фотополимер покрашенный</p>
-            <p class="number">Количество экземпляров: </p>
-            <p class="occupancy">Выполнен на 60%</p>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <form>
-            <label>Ваш email :
-              <input type="email" placeholder="dedal79gmail.com">
+          <div class="submit">
+            <label>
+              <input type="submit" value="Зарегистрироваться">
             </label>
-            <div>
-              <input type="checkbox" id="check" name="check">
-              <label for="check">Подписаться на новости</label>
-            </div>
-            <div class="submit">
-              <label>
-                <input type="submit" value="Зарегистрироваться">
-              </label>
-            </div>
-          </form>
-        </div>
-      </footer>
-    </main>
+          </div>
+        </form>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>

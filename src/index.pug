@@ -2,75 +2,85 @@ doctype
 html(lang='ru')
 
   head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='css/style.css')
+    title Kelnik
   
   body
-    main
-      header.header
-        div.container
-          div.logo
-            h1 Мои заказы
-          p Сортировать:
-            a(href="#") по дате
-            a(href="#") по готовности
+    div.wrapper
+      div.inner
+        header.header
+          div.container
+            div.logo
+              h1 Мои заказы
+            p Сортировать:
+              a(href="#") по дате
+              a(href="#") по готовности
+        main
+          section.content
+            div.container
 
-      section.content
-        div.container
+              div.card
+                div.img-box
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                h2.name Название заказа
+                p.status Статус: 
+                p.date Загружен: 
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 
 
-          div.card
-            div.img-box
-              img(src="./img/card-img.jpg", alt="Fotopolymer")
-            h2.name Название заказа
-            p.status Статус: 
-            p.date Загружен: 
-            p.description Фотополимер покрашенный
-            p.number Количество экземпляров: 
+                p.occupancy Выполнен на 60%
 
-            p.occupancy Выполнен на 60%
+              div.card
+                div.img-box
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                h2.name Название заказа
+                p.status Статус: 
+                p.date Загружен: 
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 
 
-          div.card
-            div.img-box
-              img(src="./img/card-img.jpg", alt="Fotopolymer")
-            h2.name Название заказа
-            p.status Статус: 
-            p.date Загружен: 
-            p.description Фотополимер покрашенный
-            p.number Количество экземпляров: 
+                p.occupancy Выполнен на 60%
 
-            p.occupancy Выполнен на 60%
+              div.card.label
+                div.img-box
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                h2.name Название заказа
+                p.status Статус: 
+                p.date Загружен: 
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 
 
-          div.card.label
-            div.img-box
-              img(src="./img/card-img.jpg", alt="Fotopolymer")
-            h2.name Название заказа
-            p.status Статус: 
-            p.date Загружен: 
-            p.description Фотополимер покрашенный
-            p.number Количество экземпляров: 
+                p.occupancy Выполнен на 60%
 
-            p.occupancy Выполнен на 60%
+              div.card
+                div.img-box
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                h2.name Название заказа
+                p.status Статус: 
+                p.date Загружен: 
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 
 
-          div.card
-            div.img-box
-              img(src="./img/card-img.jpg", alt="Fotopolymer")
-            h2.name Название заказа
-            p.status Статус: 
-            p.date Загружен: 
-            p.description Фотополимер покрашенный
-            p.number Количество экземпляров: 
+                p.occupancy Выполнен на 60%
 
-            p.occupancy Выполнен на 60%
+    footer.footer
+      div.container
 
-      footer.footer
-        div.container
+        form(id="registration")
+          label.email Ваш email :
+            input(type='text',placeholder='dedal79@gmail.com',id='f_mail')
+          span(id="message") прпрпр
+          div
+            input(type='checkbox',id="check",name="check")
+            label(for="check") Подписаться на новости
+          div.submit
+            label
+              input(type='submit',value='Зарегистрироваться' )
 
-          form
-            label Ваш email :
-              input(type='email',placeholder='dedal79@gmail.com')
-            div
-              input(type='checkbox',id="check",name="check")
-              label(for="check") Подписаться на новости
-            div.submit
-              label
-                input(type='submit',value='Зарегистрироваться')
+
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+    script(src="./js/script.min.js")
+
 

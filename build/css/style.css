@@ -10,30 +10,51 @@
   font-weight: bold;
   font-style: normal;
 }
-.header {
-  text-align: center;
-}
-.header a {
-  color: #ff5e42;
-}
+html,
 body {
   font-family: 'Tahoma', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: #2a2a2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .container {
   width: 1024px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 320px;
+  }
 }
 .header {
   text-align: center;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .header .logo {
   display: block;
@@ -43,6 +64,11 @@ body {
   width: 350px;
   border: 1px solid transparent;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .header .logo {
+    width: 280px;
+  }
 }
 .header a {
   color: #ff5e42;
@@ -67,13 +93,20 @@ h1 {
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+}
 .content {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  text-align: center;
 }
 .card {
+  text-align: left;
   position: relative;
   display: inline-block;
   height: 430px;
@@ -86,6 +119,16 @@ h1 {
   padding: 7px;
   margin-bottom: 40px;
   background-color: white;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 27%;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
 }
 .card:hover {
   border: 4px solid #ff5e42;
@@ -159,11 +202,16 @@ h1 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px;
+  }
+}
 .footer label {
   display: block;
   margin-bottom: 20px;
 }
-.footer input[type="email"] {
+.footer input[type="text"] {
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -172,8 +220,13 @@ h1 {
   padding: 10px;
   margin-left: 20px;
 }
-.footer input[type="email"]:focus {
+.footer input[type="text"]:focus {
   outline: none;
+}
+@media (max-width: 768px) {
+  .footer input[type="text"] {
+    max-width: 180px;
+  }
 }
 .footer .checkbox {
   margin-left: 100px;
