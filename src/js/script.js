@@ -46,15 +46,36 @@
 $(document).ready(function(){
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
 
-  $("#f_mail").change(function(){
-    var r=$("#f_mail").val();
-    var message = document.getElementById('message');
+  
+  $("#mail").change(function(){
+    var r=$("#mail").val();
+    var message = document.getElementById("message");
+
     if (!reg.test(r)) {
-      $("#f_mail").css("backgroundColor", "red");
+      $("#mail").css("backgroundColor", "#ff5e42");
       message.innerHTML = "email введен неверно"
     } else {
-      document.getElementById('message').innerHTML = "email введен верно"
+      $("#mail").css("backgroundColor", "white");
+      message.innerHTML = ""
     }
   });
 });/*end ready*/
+
+
+
+$(function() {
+
+  $(window).scroll(function() {
+    if($(this).scrollTop() != 0) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
+  });
+ 
+  $('#toTop').click(function() {
+    $('body,html').animate({scrollTop:0},800);
+  });
+});
+
 

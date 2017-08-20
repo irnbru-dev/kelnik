@@ -100,7 +100,8 @@ h1 {
   background-size: 100% 100%;
   background-position: center;
   text-align: center;
-  
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .card {
@@ -191,6 +192,18 @@ h1 {
   }
 }
 
+#toTop {
+  width:100px;
+  text-align:center;
+  margin: 0 auto;
+  cursor:pointer;
+  font-size:36px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: @proto;
+  color: @contrast-color;
+}
+
 .footer {
   background-image: url(../img/footer-bg.jpg);
   background-repeat: no-repeat;
@@ -214,6 +227,8 @@ h1 {
   }
 
   input[type="text"] {
+    // display: inline-block;
+    
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -221,6 +236,7 @@ h1 {
     font-size: 18px;
     padding: 10px;
     margin-left: 20px;
+    margin-right: 20px;
     &:focus {
       outline: none;
     }
@@ -229,9 +245,9 @@ h1 {
     }
   }
 
-  .checkbox {
-    margin-left: 100px;
-  }
+  // .checkbox {
+  //   margin-left: 100px;
+  // }
 
 input[type=checkbox] {
   display: none;

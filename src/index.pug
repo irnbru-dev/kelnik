@@ -65,19 +65,21 @@ html(lang='ru')
 
                 p.occupancy Выполнен на 60%
 
+              div(id="toTop") наверх
+
     footer.footer
       div.container
 
         form(id="registration")
           label.email Ваш email :
-            input(type='text',placeholder='dedal79@gmail.com',id='f_mail')
-          span(id="message") прпрпр
+            input(type='text',placeholder='dedal79@gmail.com',id='mail')
+            span(id="message")
           div
             input(type='checkbox',id="check",name="check")
             label(for="check") Подписаться на новости
           div.submit
             label
-              input(type='submit',value='Зарегистрироваться' )
+              input(type='submit',value='Зарегистрироваться',id="submit")
 
 
     script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
