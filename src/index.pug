@@ -22,48 +22,78 @@ html(lang='ru')
             div.container
 
               div.card
-                div.img-box
+                div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
-                h2.name Название заказа
-                p.status Статус: 
-                p.date Загружен: 
-                p.description Фотополимер покрашенный
-                p.number Количество экземпляров: 
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: в печати
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
+                  p.color Цвет: черный
+                  p.size Размер: 160 х 70
 
-                p.occupancy Выполнен на 60%
+                  p.occupancy Выполнен на 60%
 
               div.card
-                div.img-box
+                div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
-                h2.name Название заказа
-                p.status Статус: 
-                p.date Загружен: 
-                p.description Фотополимер покрашенный
-                p.number Количество экземпляров: 
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: отправлен
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
 
-                p.occupancy Выполнен на 60%
+                  p.occupancy Выполнен на 60%
 
               div.card.label
-                div.img-box
+                div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
-                h2.name Название заказа
-                p.status Статус: 
-                p.date Загружен: 
-                p.description Фотополимер покрашенный
-                p.number Количество экземпляров: 
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: в Моем магазине
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
 
-                p.occupancy Выполнен на 60%
+                  p.occupancy Выполнен на 60%
 
               div.card
-                div.img-box
+                div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
-                h2.name Название заказа
-                p.status Статус: 
-                p.date Загружен: 
-                p.description Фотополимер покрашенный
-                p.number Количество экземпляров: 
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: в печати
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
 
-                p.occupancy Выполнен на 60%
+                  p.occupancy Выполнен на 60%
+
+              div.card
+                div.card__img
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: отправлен
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
+
+                  p.occupancy Выполнен на 60%
+
+              div.card
+                div.card__img
+                  img(src="./img/card-img.jpg", alt="Fotopolymer")
+                div.card__txt
+                  h2.name Название заказа
+                  p.status Статус: отправлен
+                  p.date Загружен: 11.04.13
+                  p.description Фотополимер покрашенный
+                  p.number Количество экземпляров: 1
+
+                  p.occupancy Выполнен на 60%
 
               div(id="toTop") наверх
 
@@ -71,14 +101,14 @@ html(lang='ru')
       div.container
 
         form(id="registration")
-          label.email Ваш email :
+          label.email(for="mail") Ваш email :
             input(type='text',placeholder='dedal79@gmail.com',id='mail')
             span(id="message")
           div
-            input(type='checkbox',id="check",name="check")
+            input(type='checkbox',name="check",id="check")
             label(for="check") Подписаться на новости
           div.submit
-            label
+            label(for="submit")
               input(type='submit',value='Зарегистрироваться',id="submit")
 
 

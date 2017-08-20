@@ -24,48 +24,84 @@
           <section class="content">
             <div class="container">
               <div class="card">
-                <div class="img-box">
+                <div class="card__img">
                   <img src="./img/card-img.jpg" alt="Fotopolymer">
                 </div>
-                <h2 class="name">Название заказа</h2>
-                <p class="status">Статус: </p>
-                <p class="date">Загружен: </p>
-                <p class="description">Фотополимер покрашенный</p>
-                <p class="number">Количество экземпляров: </p>
-                <p class="occupancy">Выполнен на 60%</p>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: в печати</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="color">Цвет: черный</p>
+                  <p class="size">Размер: 160 х 70</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
               </div>
               <div class="card">
-                <div class="img-box">
+                <div class="card__img">
                   <img src="./img/card-img.jpg" alt="Fotopolymer">
                 </div>
-                <h2 class="name">Название заказа</h2>
-                <p class="status">Статус: </p>
-                <p class="date">Загружен: </p>
-                <p class="description">Фотополимер покрашенный</p>
-                <p class="number">Количество экземпляров: </p>
-                <p class="occupancy">Выполнен на 60%</p>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: отправлен</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
               </div>
               <div class="card label">
-                <div class="img-box">
+                <div class="card__img">
                   <img src="./img/card-img.jpg" alt="Fotopolymer">
                 </div>
-                <h2 class="name">Название заказа</h2>
-                <p class="status">Статус: </p>
-                <p class="date">Загружен: </p>
-                <p class="description">Фотополимер покрашенный</p>
-                <p class="number">Количество экземпляров: </p>
-                <p class="occupancy">Выполнен на 60%</p>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: в Моем магазине</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
               </div>
               <div class="card">
-                <div class="img-box">
+                <div class="card__img">
                   <img src="./img/card-img.jpg" alt="Fotopolymer">
                 </div>
-                <h2 class="name">Название заказа</h2>
-                <p class="status">Статус: </p>
-                <p class="date">Загружен: </p>
-                <p class="description">Фотополимер покрашенный</p>
-                <p class="number">Количество экземпляров: </p>
-                <p class="occupancy">Выполнен на 60%</p>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: в печати</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: отправлен</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="./img/card-img.jpg" alt="Fotopolymer">
+                </div>
+                <div class="card__txt">
+                  <h2 class="name">Название заказа</h2>
+                  <p class="status">Статус: отправлен</p>
+                  <p class="date">Загружен: 11.04.13</p>
+                  <p class="description">Фотополимер покрашенный</p>
+                  <p class="number">Количество экземпляров: 1</p>
+                  <p class="occupancy">Выполнен на 60%</p>
+                </div>
               </div>
               <div id="toTop">наверх</div>
             </div>
@@ -76,16 +112,16 @@
     <footer class="footer">
       <div class="container">
         <form id="registration">
-          <label class="email">Ваш email :
+          <label class="email" for="mail">Ваш email :
             <input type="text" placeholder="dedal79@gmail.com" id="mail">
             <span id="message"></span>
           </label>
           <div>
-            <input type="checkbox" id="check" name="check">
+            <input type="checkbox" name="check" id="check">
             <label for="check">Подписаться на новости</label>
           </div>
           <div class="submit">
-            <label>
+            <label for="submit">
               <input type="submit" value="Зарегистрироваться" id="submit">
             </label>
           </div>

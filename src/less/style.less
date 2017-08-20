@@ -1,17 +1,12 @@
 @import '_fonts.less';
 @import '_variables.less';
 
-// Blocks
-@import 'blocks/card.less';
-@import 'blocks/header.less';
-
 html, body  {
   font-family: @tahoma;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: @text-color;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -39,23 +34,20 @@ html, body  {
 
 .header {
   text-align: center;
-  
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  
   padding-top: 40px;
-  padding-bottom: 40px;
-
-  // border: 1px solid transparent;  //temporary! solving bg margins  
+  padding-bottom: 30px;
 
   .logo {
     display: block;
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 350px;
+    width: 300px;
     border: 1px solid transparent;
+    font-weight: 400;
     margin: 0 auto;
 
     @media (max-width:768px) {
@@ -63,10 +55,22 @@ html, body  {
     }
   }
 
+  h1 {
+    font-family: @proto;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 42px;
+    }
+  }
+
   a {
     color: @contrast-color;
     text-decoration: none;
     border-bottom: 1px dashed @contrast-color;
+
     &:hover {
       border-bottom: 1px solid @contrast-color;
     }
@@ -81,16 +85,11 @@ html, body  {
       display: none;
     }
   }
-}
 
-h1 {
-  font-family: @proto;
-  font-size: 48px;
-  font-weight: 400;
-  text-transform: uppercase;
-
-  @media (max-width: 768px) {
-    font-size: 42px;
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: -15px;
   }
 }
 
@@ -100,7 +99,6 @@ h1 {
   background-size: 100% 100%;
   background-position: center;
   text-align: center;
-  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -108,30 +106,36 @@ h1 {
   text-align: left;
   position: relative;
   display: inline-block;
-  height: 430px;
+  height: 410px;
   width: 20%;
   max-width: 220px;
   margin-right: 2%;
   border: 4px solid transparent;
   box-shadow: 0px -3px 2px -3px rgba(50, 50, 50, 0.75);
   border-radius: 6px;
-  padding: 7px;
+  padding: 4px;
   margin-bottom: 40px;
   background-color: white;
+  vertical-align: top;
+
   @media (max-width: 1024px) {
     width: 27%;
   }
+
   @media (max-width: 768px) {
     width: 90%;
   }
+
   &:hover {
     border: 4px solid @contrast-color;
     border-radius: 5px;
     cursor: pointer;
   }
+
   &:last-child {
     margin-right: 0;
   }
+
   &.label:after {
     position: absolute;
     content: '';
@@ -140,7 +144,7 @@ h1 {
     width: 35px;
     height: 55px;
     top: -4px;
-    right: 13px;
+    right: 1px;
 
     background-image: url(../img/label.png);
     background-repeat: no-repeat;
@@ -151,7 +155,7 @@ h1 {
     }
   }
 
-  .img-box {
+  &__img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,24 +167,31 @@ h1 {
     }
   }
 
+  &__txt {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   h2 {
     font-family: @proto;
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
+    margin-top: 10px;
     margin-bottom: 0;
   }
 
   .status {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .occupancy {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     font-family: @proto;
     text-transform: uppercase;
     font-size: 24px;
+    font-weight: 300;
     color: @text-light;
   }
 
@@ -202,6 +213,7 @@ h1 {
   text-decoration: underline;
   font-family: @proto;
   color: @contrast-color;
+  margin-top: 23px;
 }
 
 .footer {
@@ -209,9 +221,8 @@ h1 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  
   font-family: @proto;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   color: white;
   padding-top: 50px;
@@ -224,36 +235,38 @@ h1 {
   label {
     display: block;
     margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .email {
+    font-size: 14px;
   }
 
   input[type="text"] {
-    // display: inline-block;
-    
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
     font-family: @proto;
     font-size: 18px;
-    padding: 10px;
+    padding: 8px;
     margin-left: 20px;
     margin-right: 20px;
+    width: 190px;
+
     &:focus {
       outline: none;
     }
+
     @media (max-width: 768px) {
-      max-width: 180px;
+      max-width: 170px;
     }
   }
 
-  // .checkbox {
-  //   margin-left: 100px;
-  // }
+  input[type=checkbox] {
+    display: none;
+  }
 
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox] + label:before {
+  input[type=checkbox] + label:before {
     content:"";
     display: inline-block;
     border: 2px solid #fff;
@@ -261,28 +274,27 @@ input[type=checkbox] + label:before {
     font-size: 18px;
     line-height: 22px;
     margin-right: 10px;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     text-align: center;
     transition: color ease .3s;
     vertical-align: bottom;
-    margin-left: 100px;
-}
+    margin-left: 80px;
+  }
 
-input[type=checkbox]:checked + label:before {
+  input[type=checkbox]:checked + label:before {
     background-position: center center;
     background-image: url(../img/check.png);
     background-repeat: no-repeat;
-}
-
+  }
 
   .submit {
-    margin-left: 100px;
+    margin-left: 80px;
   }
 
   input[type="submit"] {
     font-family: @proto;
-    font-size: 18px;
+    font-size: 28px;
     text-decoration: underline;
     background-color: transparent;
     border: none;
@@ -291,6 +303,7 @@ input[type=checkbox]:checked + label:before {
     padding: 0;
     margin: 0;
     cursor: pointer;
+
     &:focus {
       outline:none
     }

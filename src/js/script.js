@@ -1,48 +1,4 @@
-// $('.email').on('blur', function () {
-//   var mail = $(this).val();
-//   if (mail.length > 0
-//   && (mail.match(/.+?\@.+/g) || []).length !== 1) {
-//     document.querySelector(".myemail").style.border = '1px solid red;'
-//   } else {
-//     console.log('valid');
-//     alert('Вы ввели корректный e-mail!');
-//   }
-// });
-
-
-
-// var myEmail = $('.myemail').val();
-// console.log($('.myemail').val())
-
-// // function isEmail(email) {
-// //   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-// //   return regex.test(email);
-// // }
-
-// function isValidEmailAddress(myEmail) {
-//     var pattern = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-//     return pattern.test(myEmail);
-// };
-
-// if( !isValidEmailAddress( myEmail ) ) {
-
-//     console.log('all fine')
-//   } else {
-//     console.log('you suck')
-// }
-
-// function ValidMail() {
-//     var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-//     var myMail = document.getElementById('email').value;
-//     var valid = re.test(myMail);
-
-//     if (valid) output = 'Адрес эл. почты введен правильно!';
-//     else output = 'Адрес электронной почты введен неправильно!';
-//     document.getElementById('message').innerHTML = output;
-//     return valid;
-// }
-
-
+// Email validation
 $(document).ready(function(){
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
 
@@ -61,8 +17,7 @@ $(document).ready(function(){
   });
 });/*end ready*/
 
-
-
+// Scroll to top
 $(function() {
 
   $(window).scroll(function() {
@@ -78,4 +33,17 @@ $(function() {
   });
 });
 
+
+// Change text field in card
+$(".card").hover(
+
+    function(){
+      var $switchField = $(this).find(".occupancy");
+
+      $switchField.text('+ Добавить в магазин').css("color","#ff5e42");
+    }, 
+
+    function(){
+      $switchField.text('Выполнен на 60%').css("color","#2a2a2a");
+});
 
