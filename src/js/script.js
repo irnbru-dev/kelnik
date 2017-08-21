@@ -31,7 +31,7 @@ $(function() {
   $('#toTop').click(function() {
     $('body,html').animate({scrollTop:0},800);
   });
-}
+});
 
 // Change text field in card
 $(function() {

@@ -9,94 +9,93 @@ html(lang='ru')
   
   body
     div.wrapper
-      div.inner
-        header.header
+      header.header
+        div.container
+          div.logo
+            h1 Мои заказы
+          p Сортировать:
+            a(href="#") по дате
+            a(href="#") по готовности
+      main
+        section.content
           div.container
-            div.logo
-              h1 Мои заказы
-            p Сортировать:
-              a(href="#") по дате
-              a(href="#") по готовности
-        main
-          section.content
-            div.container
 
-            div(id="cards")
-              div.card(id="card1")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: в печати
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
-                  p.color Цвет: черный
-                  p.size Размер: 160 х 70
+          div(id="cards")
+            div.card(id="card1")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: в печати
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
+                p.color Цвет: черный
+                p.size Размер: 160 х 70
 
-                  p.occupancy(data-done="50") Выполнен на 50%
+                p.occupancy(data-done="50") Выполнен на 50%
 
-              div.card(id="card2")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: отправлен
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
+            div.card(id="card2")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: отправлен
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
 
-                  p.occupancy(data-done="60") Выполнен на 60%
+                p.occupancy(data-done="60") Выполнен на 60%
 
-              div.card.label(id="card3")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: в Моем магазине
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
+            div.card.label(id="card3")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: в Моем магазине
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
 
-                  p.occupancy(data-done="35") Выполнен на 35%
+                p.occupancy(data-done="35") Выполнен на 35%
 
-              div.card(id="card4")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: в печати
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
+            div.card(id="card4")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: в печати
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
 
-                  p.occupancy(data-done="70") Выполнен на 70%
+                p.occupancy(data-done="70") Выполнен на 70%
 
-              div.card(id="card5")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: отправлен
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
+            div.card(id="card5")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: отправлен
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
 
-                  p.occupancy(data-done="40") Выполнен на 40%
+                p.occupancy(data-done="40") Выполнен на 40%
 
-              div.card(id="card6")
-                div.card__img
-                  img(src="./img/card-img.jpg", alt="Fotopolymer")
-                div.card__txt
-                  h2.name Название заказа
-                  p.status Статус: отправлен
-                  p.date Загружен: 11.04.13
-                  p.description Фотополимер покрашенный
-                  p.number Количество экземпляров: 1
+            div.card(id="card6")
+              div.card__img
+                img(src="./img/card-img.jpg", alt="Fotopolymer")
+              div.card__txt
+                h2.name Название заказа
+                p.status Статус: отправлен
+                p.date Загружен: 11.04.13
+                p.description Фотополимер покрашенный
+                p.number Количество экземпляров: 1
 
-                  p.occupancy(data-done="15") Выполнен на 15%
+                p.occupancy(data-done="15") Выполнен на 15%
 
-            div(id="toTop") наверх
+          div(id="toTop") наверх
 
     footer.footer
       div.container
