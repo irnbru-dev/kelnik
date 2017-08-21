@@ -3,7 +3,8 @@ $(function(){
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
 
   
-  $("#mail").change(function(){
+  $("#registration").on("submit", function(e){
+    e.preventDefault();
     var r=$("#mail").val();
     var message = document.getElementById("message");
 
@@ -77,5 +78,4 @@ $(function() {
 
   console.log(arrDone);
 });
-
 
