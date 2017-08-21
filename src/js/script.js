@@ -33,24 +33,25 @@ $(function() {
   });
 });
 
-
 // Change text field in card
-$(".card").hover(
+$(function() {
+  $(".card").hover(
 
-    function(){
-      var $switchField = $(this).find(".occupancy");
+      function(){
+        var $switchField = $(this).find(".occupancy");
 
-      $switchField.text('+Добавить в магазин').css("color","#ff5e42");
-    }, 
+        $switchField.text('+Добавить в магазин').css("color","#ff5e42");
+      }, 
 
-    function(){
-      var $switchField = $(this).find(".occupancy");
+      function(){
+        var $switchField = $(this).find(".occupancy");
 
-      $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
+        $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
+  });
 });
 
 
-
+// Sort cards
 $(function() {
   var arrDone = [];
 
