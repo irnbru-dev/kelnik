@@ -3,17 +3,16 @@ $(function(){
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
 
   
-  $("#registration").on("submit", function(e){
-    e.preventDefault();
+  $("#mail").change(function(e){
     var r=$("#mail").val();
-    var message = document.getElementById("message");
+    var message = $("#message");
 
     if (!reg.test(r)) {
       $("#mail").css("backgroundColor", "#ff5e42");
-      message.innerHTML = "email введен неверно"
+      message.text("email введен неверно")
     } else {
       $("#mail").css("backgroundColor", "white");
-      message.innerHTML = ""
+      message.text("")
     }
   });
 });
