@@ -21,7 +21,8 @@ html(lang='ru')
           section.content
             div.container
 
-              div.card
+            div(id="cards")
+              div.card(id="card1")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -33,9 +34,9 @@ html(lang='ru')
                   p.color Цвет: черный
                   p.size Размер: 160 х 70
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="50") Выполнен на 50%
 
-              div.card
+              div.card(id="card2")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -45,9 +46,9 @@ html(lang='ru')
                   p.description Фотополимер покрашенный
                   p.number Количество экземпляров: 1
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="60") Выполнен на 60%
 
-              div.card.label
+              div.card.label(id="card3")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -57,9 +58,9 @@ html(lang='ru')
                   p.description Фотополимер покрашенный
                   p.number Количество экземпляров: 1
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="35") Выполнен на 35%
 
-              div.card
+              div.card(id="card4")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -69,9 +70,9 @@ html(lang='ru')
                   p.description Фотополимер покрашенный
                   p.number Количество экземпляров: 1
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="70") Выполнен на 70%
 
-              div.card
+              div.card(id="card5")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -81,9 +82,9 @@ html(lang='ru')
                   p.description Фотополимер покрашенный
                   p.number Количество экземпляров: 1
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="40") Выполнен на 40%
 
-              div.card
+              div.card(id="card6")
                 div.card__img
                   img(src="./img/card-img.jpg", alt="Fotopolymer")
                 div.card__txt
@@ -93,16 +94,16 @@ html(lang='ru')
                   p.description Фотополимер покрашенный
                   p.number Количество экземпляров: 1
 
-                  p.occupancy Выполнен на 60%
+                  p.occupancy(data-done="15") Выполнен на 15%
 
-              div(id="toTop") наверх
+            div(id="toTop") наверх
 
     footer.footer
       div.container
 
         form(id="registration")
           label.email(for="mail") Ваш email :
-            input(type='text',placeholder='dedal79@gmail.com',id='mail')
+            input(type='text',placeholder='dedal79@gmail.com',id='mail',name="email")
             span(id="message")
           div
             input(type='checkbox',name="check",id="check")

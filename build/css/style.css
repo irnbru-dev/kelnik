@@ -198,6 +198,9 @@ body {
   font-weight: 300;
   color: #b8b8b8;
 }
+.card .store {
+  color: #ff5e42;
+}
 .card p {
   margin: 0;
   font-size: 13px;
