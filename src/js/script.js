@@ -31,22 +31,22 @@ $(function() {
   $('#toTop').click(function() {
     $('body,html').animate({scrollTop:0},800);
   });
-});
+}
 
 // Change text field in card
 $(function() {
   $(".card").hover(
 
-      function(){
-        var $switchField = $(this).find(".occupancy");
+    function(){
+      var $switchField = $(this).find(".occupancy");
 
-        $switchField.text('+Добавить в магазин').css("color","#ff5e42");
-      }, 
+      $switchField.text('+Добавить в магазин').css("color","#ff5e42");
+    }, 
 
-      function(){
-        var $switchField = $(this).find(".occupancy");
+    function(){
+      var $switchField = $(this).find(".occupancy");
 
-        $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
+      $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
   });
 });
 
@@ -62,14 +62,14 @@ $(function() {
   })
 
   for (var j = 0; j < arrDone.length; j++) {
-          for (var i = 0; i < arrDone.length - j - 1; i++) {
-              if (arrDone[i][1] > arrDone[i + 1][1]) {
-                  var tmp = arrDone[i];
-                  arrDone[i] = arrDone[i + 1];
-                  arrDone[i + 1] = tmp;
-              }
-          }
-      }
+    for (var i = 0; i < arrDone.length - j - 1; i++) {
+        if (arrDone[i][1] > arrDone[i + 1][1]) {
+            var tmp = arrDone[i];
+            arrDone[i] = arrDone[i + 1];
+            arrDone[i + 1] = tmp;
+        }
+    }
+  }
 
   $.each(arrDone, function (key, value) {
     $("#" + value[0]).detach().appendTo("#cards")
