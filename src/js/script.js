@@ -2,7 +2,6 @@
 $(function(){
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
 
-  
   $("#mail").change(function(e){
     var r=$("#mail").val();
     var message = $("#message");
@@ -32,24 +31,6 @@ $(function() {
     $('body,html').animate({scrollTop:0},800);
   });
 });
-
-// Change text field in card
-// $(function() {
-//   $(".card").hover(
-
-//     function(){
-//       var $switchField = $(this).find(".occupancy");
-
-//       $switchField.text('+Добавить в магазин').css("color","#ff5e42");
-//     }, 
-
-//     function(){
-//       var $switchField = $(this).find(".occupancy");
-
-//       $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
-//   });
-// });
-
 
 // Sort cards
 $(function() {
