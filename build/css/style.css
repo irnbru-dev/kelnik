@@ -138,10 +138,26 @@ body {
     width: 90%;
   }
 }
+.card .store {
+  display: none;
+}
 .card:hover {
   border: 4px solid #ff5e42;
   border-radius: 5px;
   cursor: pointer;
+}
+.card:hover .occupancy {
+  display: none;
+}
+.card:hover .store {
+  display: inline-block;
+  color: #ff5e42;
+  position: absolute;
+  bottom: 15px;
+  font-family: 'PrototypsterMedium', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 300;
 }
 .card:last-child {
   margin-right: 0;

@@ -34,47 +34,50 @@ $(function() {
 });
 
 // Change text field in card
-$(function() {
-  $(".card").hover(
+// $(function() {
+//   $(".card").hover(
 
-    function(){
-      var $switchField = $(this).find(".occupancy");
+//     function(){
+//       var $switchField = $(this).find(".occupancy");
 
-      $switchField.text('+Добавить в магазин').css("color","#ff5e42");
-    }, 
+//       $switchField.text('+Добавить в магазин').css("color","#ff5e42");
+//     }, 
 
-    function(){
-      var $switchField = $(this).find(".occupancy");
+//     function(){
+//       var $switchField = $(this).find(".occupancy");
 
-      $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
-  });
-});
+//       $switchField.text('Выполнен на 60%').css("color","#b8b8b8");
+//   });
+// });
 
 
 // Sort cards
 $(function() {
   var arrDone = [];
 
-  $(".occupancy").each(function() {
-    var done = $(this).data("done");
-    
-    arrDone.push([$(this).parents(".card").attr("id"), done]);
-  })
+    $(".down").on("click", function() {  
+      $(".occupancy").each(function() {
+      var done = $(this).data("done");
+      
+      arrDone.push([$(this).parents(".card").attr("id"), done]);
+    })
 
-  for (var j = 0; j < arrDone.length; j++) {
-    for (var i = 0; i < arrDone.length - j - 1; i++) {
-        if (arrDone[i][1] > arrDone[i + 1][1]) {
-            var tmp = arrDone[i];
-            arrDone[i] = arrDone[i + 1];
-            arrDone[i + 1] = tmp;
-        }
+    for (var j = 0; j < arrDone.length; j++) {
+      for (var i = 0; i < arrDone.length - j - 1; i++) {
+          if (arrDone[i][1] > arrDone[i + 1][1]) {
+              var tmp = arrDone[i];
+              arrDone[i] = arrDone[i + 1];
+              arrDone[i + 1] = tmp;
+          }
+      }
     }
-  }
 
-  $.each(arrDone, function (key, value) {
-    $("#" + value[0]).detach().appendTo("#cards")
+    $.each(arrDone, function (key, value) {
+      $("#" + value[0]).detach().appendTo("#cards")
+    })
+
+    console.log(arrDone);
   })
 
-  console.log(arrDone);
 });
 

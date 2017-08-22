@@ -126,10 +126,29 @@ html, body  {
     width: 90%;
   }
 
+  .store {
+    display: none;
+  }
+
   &:hover {
     border: 4px solid @contrast-color;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  &:hover .occupancy {
+    display: none;
+  }
+
+  &:hover .store {
+    display: inline-block;
+    color: @contrast-color;
+    position: absolute;
+    bottom: 15px;
+    font-family: @proto;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
   }
 
   &:last-child {
