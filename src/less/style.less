@@ -74,16 +74,31 @@ html, body  {
     &:hover {
       border-bottom: 1px solid @contrast-color;
     }
-    &:after {
+    &:before{
       position: relative;
-      content:'|';
+      content: "|";
       color: black;
-      left: 3px;
+      left: -2px;
       
     }
-    &:last-child:after {
+    &:first-child:before {
       display: none;
     }
+  }
+
+  .up:after {
+    margin-left: 2px;
+    content: "\25bc";
+    width: 8px;
+    height: 8px;
+
+  }
+
+  .down:after {
+    margin-left: 2px;
+    content: "\25b2";
+    width: 8px;
+    height: 8px;
   }
 
   p {

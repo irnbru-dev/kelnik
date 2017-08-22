@@ -53,9 +53,12 @@ $(function() {
 
 // Sort cards
 $(function() {
-  var arrDone = [];
+  var $sort = $("#sort");
 
-    $(".down").on("click", function() {  
+  $sort.on("click", function(e) {
+    e.preventDefault();
+    var arrDone = [];
+
       $(".occupancy").each(function() {
       var done = $(this).data("done");
       
@@ -72,9 +75,19 @@ $(function() {
       }
     }
 
-    $.each(arrDone, function (key, value) {
+    var sorting = function(arrDone) {
+      $.each(arrDone, function (key, value) {
       $("#" + value[0]).detach().appendTo("#cards")
     })
+
+    }
+    if ($sort.hasClass("up")) {
+      sorting(arrDone.reverse());
+      $sort.removeClass("up").addClass("down");
+    } else {
+      sorting(arrDone);
+      $sort.hasClass("down") ? $sort.removeClass("down").addClass("up") : $sort.addClass("down");
+    }
 
     console.log(arrDone);
   })

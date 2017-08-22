@@ -90,14 +90,26 @@ body {
 .header a:hover {
   border-bottom: 1px solid #ff5e42;
 }
-.header a:after {
+.header a:before {
   position: relative;
-  content: '|';
+  content: "|";
   color: black;
-  left: 3px;
+  left: -2px;
 }
-.header a:last-child:after {
+.header a:first-child:before {
   display: none;
+}
+.header .up:after {
+  margin-left: 2px;
+  content: "\25bc";
+  width: 8px;
+  height: 8px;
+}
+.header .down:after {
+  margin-left: 2px;
+  content: "\25b2";
+  width: 8px;
+  height: 8px;
 }
 .header p {
   font-size: 14px;
